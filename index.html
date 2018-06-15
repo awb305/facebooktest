@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Put your CSS reset here! -->
+    <link rel="stylesheet" href=reset.css>
+    <!-- Bootstrap CSS CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Put your stylesheet here! -->
+    <link rel="stylesheet" href=style.css>
+    <title>title</title>
+</head>
+
+<body>
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '{your-app-id}',
+                cookie: true,
+                xfbml: true,
+                version: '{latest-api-version}'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    Testing
+</body>
+<!-- jQuery CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Put your javascript files here  -->
+<script src=app.js></script>
+
+</html>
